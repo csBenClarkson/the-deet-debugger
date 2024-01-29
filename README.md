@@ -2,7 +2,8 @@
 The Deet Debugger implementation from Stanford CS110L Projects.
 
 CS110L Assignment handouts are available [here](https://reberhardt.com/cs110l/spring-2020/).  
-Includes starter code from [here](https://github.com/reberhardt7/cs110l-spr-2020-starter-code).  
+Include starter code from [here](https://github.com/reberhardt7/cs110l-spr-2020-starter-code).  
+Adapt crates of newer versions according to [here](https://github.com/fung-hwang/CS110L-2020spr/tree/main/proj-1)
 Full development process can be found [here](https://github.com/csBenClarkson/cs110l-spr-2020).  
 
 # Description
