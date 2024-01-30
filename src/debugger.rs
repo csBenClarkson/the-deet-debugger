@@ -1,4 +1,3 @@
-use std::fmt::Display;
 use crate::debugger_command::DebuggerCommand;
 use crate::inferior::{Inferior, Status};
 use rustyline::error::ReadlineError;
@@ -17,7 +16,7 @@ pub struct Debugger {
 
 impl Debugger {
     /// Initializes the debugger.
-    pub fn new(target: &str) -> Debugger {
+    pub fn new(target: &str, print_info: bool) -> Debugger {
         let debug_data = match DwarfData::from_file(target) {
             Ok(val)=> val,
             Err(DwarfError::ErrorOpeningFile) => {
@@ -34,6 +33,9 @@ impl Debugger {
         let mut readline = Editor::<(), FileHistory>::new().expect("Create editor fails.");
         // Attempt to load history from ~/.deet_history if it exists
         let _ = readline.load_history(&history_path);
+
+        if print_info { debug_data.print(); }
+        println!();
 
         Debugger {
             target: target.to_string(),

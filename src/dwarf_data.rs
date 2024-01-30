@@ -3,7 +3,6 @@ use addr2line::Context;
 use object::Object;
 use std::convert::TryInto;
 use std::{fmt, fs};
-use std::fs::OpenOptions;
 
 #[derive(Debug)]
 pub enum Error {
