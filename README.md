@@ -1,5 +1,5 @@
 # the-deet-debugger
-The Deet Debugger implementation from Stanford CS110L Projects.
+The Deet Debugger implementation, one of Stanford CS110L Projects.
 
 CS110L Assignment handouts are available [here](https://reberhardt.com/cs110l/spring-2020/).  
 Include starter code from [here](https://github.com/reberhardt7/cs110l-spr-2020-starter-code).  
