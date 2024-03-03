@@ -14,8 +14,10 @@ fn main() {
         std::process::exit(1);
     }
     let target = &args[1];
-    let print_info = if &args[2] == "-i" { true } else { println!("Unknown option {}", &args[2]); false };
-
+    let mut print_info = false;
+    if args.len() == 3 {
+        print_info = if &args[2] == "-i" { true } else { println!("Unknown option {}", &args[2]); false };
+    }
     // Disable handling of ctrl+c in this process (so that ctrl+c only gets delivered to child
     // processes)
     unsafe { signal(Signal::SIGINT, SigHandler::SigIgn) }.expect("Error disabling SIGINT handling");
